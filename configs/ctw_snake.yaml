@@ -1,0 +1,21 @@
+model: 'ctw'
+network: 'ro_34'
+task: 'snake'
+resume: true
+gpus: (0,)
+
+train:
+    optim: 'adam'
+    lr: 1e-4
+    milestones: (80, 120, 160, 180, 260)
+    gamma: 0.5
+    batch_size: 6
+    dataset: 'CtwTrain'
+    num_workers: 8
+    epoch: 300
+test:
+    dataset: 'CtwMini'
+    batch_size: 1
+
+heads: {'ct_hm': 1, 'wh': 2}
+segm_or_bbox: 'segm'

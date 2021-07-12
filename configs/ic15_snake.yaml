@@ -1,0 +1,21 @@
+model: 'ic15'
+network: 'ro_34'
+task: 'snake'
+resume: true
+gpus: (0,)
+
+train:
+    optim: 'adam'
+    lr: 1e-4
+    milestones: (80, 120, 160, 180)
+    gamma: 0.5
+    batch_size: 6
+    dataset: 'IC15Train'
+    num_workers: 1
+    epoch: 200
+test:
+    dataset: 'IC15Mini'
+    batch_size: 1
+
+heads: {'ct_hm': 1, 'wh': 2}
+segm_or_bbox: 'segm'
