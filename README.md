@@ -1,2 +1,2 @@
 # PCR
-In master Branch [https://github.com/dpengwen/PCR/tree/master]
+In master branch [https://github.com/dpengwen/PCR/tree/master]
